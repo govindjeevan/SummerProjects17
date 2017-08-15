@@ -1,0 +1,306 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 Menlo-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red46\green174\blue187;\red255\green255\blue255;\red47\green180\blue29;
+\red0\green0\blue0;\red159\green160\blue28;\red200\green20\blue201;\red192\green192\blue192;\red180\green36\blue25;
+}
+{\*\expandedcolortbl;;\cssrgb\c20196\c73240\c78250;\csgray\c100000;\cssrgb\c20238\c73898\c14947;
+\csgray\c0;\cssrgb\c68468\c68012\c14208;\cssrgb\c83396\c23075\c82664;\cssrgb\c79889\c79890\c79889;\cssrgb\c76409\c21698\c12524;
+}
+\margl1440\margr1440\vieww25400\viewh13320\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 1.\
+The program of the executable is:\
+#include<iostream>\
+\
+using namespace std;\
+\
+int main()\
+\{\
+int a;\
+cout<<\'93Enter an integer\'94;\
+cin>>a;\
+cout<<\'93Try again\'94;\
+\}\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \cb3 \CocoaLigature0  \cf4 0x00400896\cf5       \cf6 55\cf5              \cf7 push\cf2  rbp\cf5                         /*Moving the Stack pointer to the Starting position                                                                                                          \
+\cf2 |           \cf4 0x00400897\cf5       \cf6 48\cf8 89e5\cf5          \cf8 mov\cf2  rbp\cf5 ,\cf2  rsp\cf5            to the Starting position*/                                                                                                                   \
+\cf2 |           \cf4 0x0040089a\cf5       \cf6 48\cf8 83ec10\cf5        \cf6 sub\cf2  rsp\cf5 ,\cf2  \cf6 0x10\cf5          //Allocating memory                                                                                                                    \
+\cf2 |           \cf4 0x0040089e\cf5       \cf6 6448\cf8 8b04\cf6 2528\cf8 .\cf5   \cf8 mov\cf2  rax\cf5 ,\cf2  qword fs:\cf5 [\cf6 0x28\cf5 ]\cf9     ; [0x28:8]=0x1c68 ; '('\cf5           /*Declaring                                                                              \
+\cf2 |           \cf4 0x004008a7\cf5       \cf6 48\cf8 89\cf6 45\cf8 f8\cf5        \cf8 mov qword\cf2  \cf5 [\cf2 local_8h\cf5 ],\cf2  rax\cf5                                           a                                                                       \
+\cf2 |           \cf4 0x004008ab\cf5       \cf6 31\cf8 c0\cf5            \cf2 xor eax\cf5 ,\cf2  eax\cf5                                                     variable*/                                                                          \
+\cf2 |           \cf4 0x004008ad\cf5       \cf8 bed409\cf6 40\cf4 00\cf5      \cf8 mov\cf2  esi\cf5 ,\cf2  \cf6 str.Enter_an_integer\cf9  ; 0x4009d4 ; "Enter an integer"\cf5   /*Printing a string                                                                           \
+\cf2 |           \cf4 0x004008b2\cf5       \cf8 bf8011\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cout\cf9       ; method.std.cout ; 0x601180\cf5          \'93Enter an integer\'94*/                                                                         \
+\cf2 |           \cf4 0x004008b7\cf5       \cf8 e8a4fe\cf9 ffff\cf5      
+\f2\b \cf4 call sub._ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc_56_760
+\f1\b0 \cf5  \cf9 ;[1]\cf5  //Calling print function                                                             \
+\cf2 |           \cf4 0x004008bc\cf5       \cf6 48\cf8 8d\cf6 45\cf8 f7\cf5        \cf8 lea\cf2  rax\cf5 ,\cf2  \cf5 [\cf2 local_9h\cf5 ]             /*Reading the input                                                                                                          \
+\cf2 |           \cf4 0x004008c0\cf5       \cf6 48\cf8 89c6\cf5          \cf8 mov\cf2  rsi\cf5 ,\cf2  rax\cf5                        from the user*/                                                                                                       \
+\cf2 |           \cf4 0x004008c3\cf5       \cf8 bf\cf6 60\cf8 10\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cin\cf9        ; method.std.cin ; 0x601060 ; "GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609"\cf5                            \
+\cf2 |           \cf4 0x004008c8\cf5       \cf8 e8b3fe\cf9 ffff\cf5      
+\f2\b \cf4 call sub._ZStrsIcSt11char_traitsIcEERSt13basic_istreamIT_T0_ES6_RS3__72_780
+\f1\b0 \cf5  \cf9 ;[2]\cf5    //Input function                                                       \
+\cf2 |           \cf4 0x004008cd\cf5       \cf8 bee509\cf6 40\cf4 00\cf5      \cf8 mov\cf2  esi\cf5 ,\cf2  \cf6 str.Try_again\cf9       ; 0x4009e5 ; "Try again"\cf5                                /*Output function                                                       \
+\cf2 |           \cf4 0x004008d2\cf5       \cf8 bf8011\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cout\cf9       ; method.std.cout ; 0x601180\cf5                              saying Try again                                                     \
+\cf2 |           \cf4 0x004008d7\cf5       \cf8 e884fe\cf9 ffff\cf5      
+\f2\b \cf4 call sub._ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc_56_760
+\f1\b0 \cf5  \cf9 ;[1]\cf5         Calling that function*/                                                      \
+\cf2 |           \cf4 0x004008dc\cf5       \cf8 b8\cf4 00000000\cf5      \cf8 mov\cf2  eax\cf5 ,\cf2  \cf6 0\cf5                     //Clearing register                                                                                                            \
+\cf2 |           \cf4 0x004008e1\cf5       \cf6 48\cf8 8b\cf6 55\cf8 f8\cf5        \cf8 mov\cf2  rdx\cf5 ,\cf2  qword \cf5 [\cf2 local_8h\cf5 ]                                                                                                                 \
+\cf2 |           \cf4 0x004008e5\cf5       \cf6 644833\cf8 14\cf6 2528\cf8 .\cf5   \cf2 xor rdx\cf5 ,\cf2  qword fs:\cf5 [\cf6 0x28\cf5 ]     //Clearing register                                                                                                             \
+\cf2 |       ,=< \cf4 0x004008ee\cf5       \cf6 74\cf8 05\cf5            \cf4 je 0x4008f5\cf5                  \cf9 ;[3]\cf5                                                                                                           \
+\cf2 |       |   \cf4 0x004008f0\cf5       \cf8 e8\cf6 7b\cf8 fe\cf9 ffff\cf5      
+\f2\b \cf4 call sym.imp.__stack_chk_fail
+\f1\b0 \cf5  \cf9 ;[4] ; void __stack_chk_fail(void)                                                                          \cf5 \
+\cf2 |       |   \cf5    \cf9 ; JMP XREF from 0x004008ee (sym.main)\cf5                              /* clean up                                                                                                    \
+\cf2 |       `-> \cf4 0x004008f5\cf5       \cf8 c9\cf5              
+\f2\b \cf7 leave
+\f1\b0 \cf5                                     lines*/                                                                                                 \
+\cf2 \\           \cf4 0x004008f6\cf5       \cf8 c3\cf5              \cf9 ret\cf5                                                                 \
+\
+2.\
+The second executable contains a nested if else block.\
+\
+\cf4 0x00400897\cf5       \cf6 48\cf8 89e5\cf5          \cf8 mov\cf2  rbp\cf5 ,\cf2  rsp\cf5                                                                                                                               \
+\cf2 |           \cf4 0x0040089a\cf5       \cf6 48\cf8 83ec10\cf5        \cf6 sub\cf2  rsp\cf5 ,\cf2  \cf6 0x10\cf5                               //allocating memory                                                                                                                   \
+\cf2 |           \cf4 0x0040089e\cf5       \cf6 6448\cf8 8b04\cf6 2528\cf8 .\cf5   \cf8 mov\cf2  rax\cf5 ,\cf2  qword fs:\cf5 [\cf6 0x28\cf5 ]\cf9     ; [0x28:8]=0x1c68 ; '('\cf5                                                                                        \
+\cf2 |           \cf4 0x004008a7\cf5       \cf6 48\cf8 89\cf6 45\cf8 f8\cf5        \cf8 mov qword\cf2  \cf5 [\cf2 local_8h\cf5 ],\cf2  rax\cf5                                                                                                                  \
+\cf2 |           \cf4 0x004008ab\cf5       \cf6 31\cf8 c0\cf5            \cf2 xor eax\cf5 ,\cf2  eax\cf5                               //Clearing register                                                                                                                 \
+\cf2 |           \cf4 0x004008ad\cf5       \cf8 bee80a\cf6 40\cf4 00\cf5      \cf8 mov\cf2  esi\cf5 ,\cf2  \cf6 str.Enter_a_character_n\cf9  ; 0x400ae8 ; "Enter a character\\n"\cf5                                                                        \
+\cf2 |           \cf4 0x004008b2\cf5       \cf8 bf8011\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cout\cf9       ; method.std.cout ; 0x601180\cf5              //Printing Enter a Character                                                                     \
+\cf2 |           \cf4 0x004008b7\cf5       \cf8 e8a4fe\cf9 ffff\cf5      
+\f2\b \cf4 call sub._ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc_56_760
+\f1\b0 \cf5  \cf9 ;[1]\cf5   //Print function                                                            \
+\cf2 |           \cf4 0x004008bc\cf5       \cf6 48\cf8 8d\cf6 45\cf8 f7\cf5        \cf8 lea\cf2  rax\cf5 ,\cf2  \cf5 [\cf2 local_9h\cf5 ]                                                                                                                       \
+\cf2 |           \cf4 0x004008c0\cf5       \cf6 48\cf8 89c6\cf5          \cf8 mov\cf2  rsi\cf5 ,\cf2  rax\cf5                                                                                                                               \
+\cf2 |           \cf4 0x004008c3\cf5       \cf8 bf\cf6 60\cf8 10\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cin\cf9        ; method.std.cin ; 0x601060 ; "GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609"\cf5  //Taking input                          \
+\cf2 |           \cf4 0x004008c8\cf5       \cf8 e8b3fe\cf9 ffff\cf5      
+\f2\b \cf4 call sub._ZStrsIcSt11char_traitsIcEERSt13basic_istreamIT_T0_ES6_RS3__72_780
+\f1\b0 \cf5  \cf9 ;[2]\cf5                                                           \
+\cf2 |           \cf4 0x004008cd\cf5       \cf8 0fb6\cf6 45\cf8 f7\cf5        \cf8 movzx\cf2  eax\cf5 ,\cf2  byte \cf5 [\cf2 local_9h\cf5 ]                                      //If block                                                                          \
+\cf2 |           \cf4 0x004008d1\cf5       \cf6 3c47\cf5            \cf2 cmp al\cf5 ,\cf2  \cf6 0x47\cf9                 ; 'G' ; 'G'                        \cf5 //Comparing the input character with the character \'91G\'92   \
+\cf2 |       ,=< \cf4 0x004008d3\cf5       \cf8 0f85fd\cf4 000000\cf5    \cf4 jne 0x4009d6\cf5                 \cf9 ;[3]\cf5                                                                                                           \
+\cf2 |       |   \cf4 0x004008d9\cf5       \cf8 befb0a\cf6 40\cf4 00\cf5      \cf8 mov\cf2  esi\cf5 ,\cf2  \cf6 str.Good._Enter_the_next_n\cf9  ; 0x400afb ; "Good. Enter the next\\n"\cf5   //Printing                                                                \
+\cf2 |       |   \cf4 0x004008de\cf5       \cf8 bf8011\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cout\cf9       ; method.std.cout ; 0x601180\cf5                                                                                   \
+\cf2 |       |   \cf4 0x004008e3\cf5       \cf8 e8\cf6 78\cf8 fe\cf9 ffff\cf5      
+\f2\b \cf4 call sub._ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc_56_760
+\f1\b0 \cf5  \cf9 ;[1]\cf5                                                               \
+\cf2 |       |   \cf4 0x004008e8\cf5       \cf6 48\cf8 8d\cf6 45\cf8 f7\cf5        \cf8 lea\cf2  rax\cf5 ,\cf2  \cf5 [\cf2 local_9h\cf5 ]                                                                                                                       \
+\cf2 |       |   \cf4 0x004008ec\cf5       \cf6 48\cf8 89c6\cf5          \cf8 mov\cf2  rsi\cf5 ,\cf2  rax\cf5                                                                                                                               \
+\cf2 |       |   \cf4 0x004008ef\cf5       \cf8 bf\cf6 60\cf8 10\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cin\cf9        ; method.std.cin ; 0x601060 ; "GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609"\cf5                            \
+\cf2 |       |   \cf4 0x004008f4\cf5       \cf8 e887fe\cf9 ffff\cf5      
+\f2\b \cf4 call sub._ZStrsIcSt11char_traitsIcEERSt13basic_istreamIT_T0_ES6_RS3__72_780
+\f1\b0 \cf5  \cf9 ;[2]\cf5                                                           \
+\cf2 |       |   \cf4 0x004008f9\cf5       \cf8 0fb6\cf6 45\cf8 f7\cf5        \cf8 movzx\cf2  eax\cf5 ,\cf2  byte \cf5 [\cf2 local_9h\cf5 ]                                     //If block                                                                           \
+\cf2 |       |   \cf4 0x004008fd\cf5       \cf6 3c72\cf5            \cf2 cmp al\cf5 ,\cf2  \cf6 0x72\cf9                 ; 'r' ; 'r'\cf5                         //Comparing the input character with the character \'91r\'92                                                                              \
+\cf2 |      ,==< \cf4 0x004008ff\cf5       \cf8 0f85c0\cf4 000000\cf5    \cf4 jne 0x4009c5\cf5                 \cf9 ;[4]\cf5                                                                                                           \
+\cf2 |      ||   \cf4 0x00400905\cf5       \cf8 be110b\cf6 40\cf4 00\cf5      \cf8 mov\cf2  esi\cf5 ,\cf2  \cf6 str.Next__n\cf9         ; 0x400b11 ; "Next?\\n"\cf5               //Printing                                                                          \
+\cf2 |      ||   \cf4 0x0040090a\cf5       \cf8 bf8011\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cout\cf9       ; method.std.cout ; 0x601180\cf5                                                                                   \
+\cf2 |      ||   \cf4 0x0040090f\cf5       \cf8 e8\cf6 4c\cf8 fe\cf9 ffff\cf5      
+\f2\b \cf4 call sub._ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc_56_760
+\f1\b0 \cf5  \cf9 ;[1]\cf5                                                               \
+\cf2 |      ||   \cf4 0x00400914\cf5       \cf6 48\cf8 8d\cf6 45\cf8 f7\cf5        \cf8 lea\cf2  rax\cf5 ,\cf2  \cf5 [\cf2 local_9h\cf5 ]                                                                                                                       \
+\cf2 |      ||   \cf4 0x00400918\cf5       \cf6 48\cf8 89c6\cf5          \cf8 mov\cf2  rsi\cf5 ,\cf2  rax\cf5                                                                                                                               \
+\cf2 |      ||   \cf4 0x0040091b\cf5       \cf8 bf\cf6 60\cf8 10\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cin\cf9        ; method.std.cin ; 0x601060 ; "GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609"\cf5                            \
+\cf2 |      ||   \cf4 0x00400920\cf5       \cf8 e8\cf6 5b\cf8 fe\cf9 ffff\cf5      
+\f2\b \cf4 call sub._ZStrsIcSt11char_traitsIcEERSt13basic_istreamIT_T0_ES6_RS3__72_780
+\f1\b0 \cf5  \cf9 ;[2]\cf5                                                           \
+\cf2 |      ||   \cf4 0x00400925\cf5       \cf8 0fb6\cf6 45\cf8 f7\cf5        \cf8 movzx\cf2  eax\cf5 ,\cf2  byte \cf5 [\cf2 local_9h\cf5 ]                                       //If block                                                                         \
+\cf2 |      ||   \cf4 0x00400929\cf5       \cf6 3c33\cf5            \cf2 cmp al\cf5 ,\cf2  \cf6 0x33\cf9                 ; '3' ; '3'\cf5                           //Comparing the input character with the character \'913\'92                                                                            \
+\cf2 |     ,===< \cf4 0x0040092b\cf5       \cf8 0f8583\cf4 000000\cf5    \cf4 jne 0x4009b4\cf5                 \cf9 ;[5]\cf5                                                                                                           \
+\cf2 |     |||   \cf4 0x00400931\cf5       \cf8 be180b\cf6 40\cf4 00\cf5      \cf8 mov\cf2  esi\cf5 ,\cf2  \cf6 str.Close._Next_n\cf9   ; 0x400b18 ; "Close. Next\\n"\cf5          //Printing                                                                         \
+\cf2 |     |||   \cf4 0x00400936\cf5       \cf8 bf8011\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cout\cf9       ; method.std.cout ; 0x601180\cf5                                                                                   \
+\cf2 |     |||   \cf4 0x0040093b\cf5       \cf8 e8\cf6 20\cf8 fe\cf9 ffff\cf5      
+\f2\b \cf4 call sub._ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc_56_760
+\f1\b0 \cf5  \cf9 ;[1]\cf5                                                               \
+\cf2 |     |||   \cf4 0x00400940\cf5       \cf6 48\cf8 8d\cf6 45\cf8 f7\cf5        \cf8 lea\cf2  rax\cf5 ,\cf2  \cf5 [\cf2 local_9h\cf5 ]                                                                                                                       \
+\cf2 |     |||   \cf4 0x00400944\cf5       \cf6 48\cf8 89c6\cf5          \cf8 mov\cf2  rsi\cf5 ,\cf2  rax\cf5                                                                                                                               \
+\cf2 |     |||   \cf4 0x00400947\cf5       \cf8 bf\cf6 60\cf8 10\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cin\cf9        ; method.std.cin ; 0x601060 ; "GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609"\cf5                            \
+\cf2 |     |||   \cf4 0x0040094c\cf5       \cf8 e8\cf6 2f\cf8 fe\cf9 ffff\cf5      
+\f2\b \cf4 call sub._ZStrsIcSt11char_traitsIcEERSt13basic_istreamIT_T0_ES6_RS3__72_780
+\f1\b0 \cf5  \cf9 ;[2]\cf5                                                           \
+\cf2 |     |||   \cf4 0x00400951\cf5       \cf8 0fb6\cf6 45\cf8 f7\cf5        \cf8 movzx\cf2  eax\cf5 ,\cf2  byte \cf5 [\cf2 local_9h\cf5 ]                                                      //If block                                                          \
+\cf2 |     |||   \cf4 0x00400955\cf5       \cf6 3c34\cf5            \cf2 cmp al\cf5 ,\cf2  \cf6 0x34\cf9                 ; '4' ; section_end..comment ; u"@8\\t@\\x1f\\x1c\\x06"\cf5  //Comparing the input character with the character \'914\'92                                                             \
+\cf2 |    ,====< \cf4 0x00400957\cf5       \cf6 754a\cf5            \cf4 jne 0x4009a3\cf5                 \cf9 ;[6]\cf5                                                                                                           \
+\cf2 |    ||||   \cf4 0x00400959\cf5       \cf8 be\cf6 25\cf8 0b\cf6 40\cf4 00\cf5      \cf8 mov\cf2  esi\cf5 ,\cf2  \cf6 str.The_last_one__n\cf9  ; 0x400b25 ; "The last one!\\n"\cf5                                                                                \
+\cf2 |    ||||   \cf4 0x0040095e\cf5       \cf8 bf8011\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cout\cf9       ; method.std.cout ; 0x601180\cf5                                                                                   \
+\cf2 |    ||||   \cf4 0x00400963\cf5       \cf8 e8f8fd\cf9 ffff\cf5      
+\f2\b \cf4 call sub._ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc_56_760
+\f1\b0 \cf5  \cf9 ;[1]\cf5     \
+\cf4 0x0040095e\cf5       \cf8 bf8011\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cout\cf9       ; method.std.cout ; 0x601180\cf5                                                                                   \
+\cf2 |       |   \cf4 0x00400963\cf5       \cf8 e8f8fd\cf9 ffff\cf5      
+\f2\b \cf4 call sub._ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc_56_760
+\f1\b0 \cf5  \cf9 ;[3]\cf5                                                               \
+\cf2 |       |   \cf4 0x00400968\cf5       \cf6 48\cf8 8d\cf6 45\cf8 f7\cf5        \cf8 lea\cf2  rax\cf5 ,\cf2  \cf5 [\cf2 local_9h\cf5 ]                                                                                                                       \
+\cf2 |       |   \cf4 0x0040096c\cf5       \cf6 48\cf8 89c6\cf5          \cf8 mov\cf2  rsi\cf5 ,\cf2  rax\cf5                                                                                                                               \
+\cf2 |       |   \cf4 0x0040096f\cf5       \cf8 bf\cf6 60\cf8 10\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cin\cf9        ; method.std.cin ; 0x601060 ; "GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609"\cf5                            \
+\cf2 |       |   \cf4 0x00400974\cf5       \cf8 e807fe\cf9 ffff\cf5      
+\f2\b \cf4 call sub._ZStrsIcSt11char_traitsIcEERSt13basic_istreamIT_T0_ES6_RS3__72_780
+\f1\b0 \cf5  \cf9 ;[1]\cf5                                                           \
+\cf2 |       |   \cf4 0x00400979\cf5       \cf8 0fb6\cf6 45\cf8 f7\cf5        \cf8 movzx\cf2  eax\cf5 ,\cf2  byte \cf5 [\cf2 local_9h\cf5 ]                                               //If block                                                                 \
+\cf2 |       |   \cf4 0x0040097d\cf5       \cf6 3c74\cf5            \cf2 cmp al\cf5 ,\cf2  \cf6 0x74\cf9                 ; 't' ; 't'\cf5                                  //Comparing the input character with the character \'91t\'92                                                                     \
+\cf2 |      ,==< \cf4 0x0040097f\cf5       \cf6 75\cf8 11\cf5            \cf4 jne 0x400992\cf5                 \cf9 ;[4]\cf5                                                                                                           \
+\cf2 |      ||   \cf4 0x00400981\cf5       \cf8 be\cf6 34\cf8 0b\cf6 40\cf4 00\cf5      \cf8 mov\cf2  esi\cf5 ,\cf2  \cf6 str.Congrats_:__n\cf9   ; 0x400b34 ; "Congrats :)\\n"\cf5                                                                                   \
+\cf2 |      ||   \cf4 0x00400986\cf5       \cf8 bf8011\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cout\cf9       ; method.std.cout ; 0x601180\cf5                                                                                   \
+\cf2 |      ||   \cf4 0x0040098b\cf5       \cf8 e8d0fd\cf9 ffff\cf5      
+\f2\b \cf4 call sub._ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc_56_760
+\f1\b0 \cf5  \cf9 ;[3]\cf5                                                               \
+\cf2 |     ,===< \cf4 0x00400990\cf5       \cf8 eb\cf6 53\cf5            \cf4 jmp 0x4009e5\cf5                 \cf9 ;[5]\cf5                                                                                                           \
+\cf2 |     |||   \cf5    \cf9 ; JMP XREF from 0x0040097f (main)\cf5                                              //Else for the fifth If block                                                                                         \
+\cf2 |     |`--> \cf4 0x00400992\cf5       \cf8 be\cf6 48\cf8 0b\cf6 40\cf4 00\cf5      \cf8 mov\cf2  esi\cf5 ,\cf2  \cf6 str.You_can_guess_it_now__Got_to_try_again_n\cf9  ; 0x400b48 ; "You can guess it now! Got to try again\\n"\cf5                              \
+\cf2 |     | |   \cf4 0x00400997\cf5       \cf8 bf8011\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cout\cf9       ; method.std.cout ; 0x601180\cf5                                                                                   \
+\cf2 |     | |   \cf4 0x0040099c\cf5       \cf8 e8bffd\cf9 ffff\cf5      
+\f2\b \cf4 call sub._ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc_56_760
+\f1\b0 \cf5  \cf9 ;[3]\cf5                                                               \
+\cf2 |     |,==< \cf4 0x004009a1\cf5       \cf8 eb\cf6 42\cf5            \cf4 jmp 0x4009e5\cf5                 \cf9 ;[5]\cf5                                                                                                           \
+\cf2 |     |||   \cf5    \cf9 ; JMP XREF from 0x00400957 (main)\cf5                                           //Else for the fourth If block                                                                                            \
+\cf2 |     ||`-> \cf4 0x004009a3\cf5       \cf8 be\cf6 70\cf8 0b\cf6 40\cf4 00\cf5      \cf8 mov\cf2  esi\cf5 ,\cf2  \cf6 str.Sooooo_close____Try_again_n\cf9  ; 0x400b70 ; "Sooooo close!!! Try again\\n"\cf5                                                        \
+\cf2 |     ||    \cf4 0x004009a8\cf5       \cf8 bf8011\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cout\cf9       ; method.std.cout ; 0x601180\cf5                                                                                   \
+\cf2 |     ||    \cf4 0x004009ad\cf5       \cf8 e8aefd\cf9 ffff\cf5      
+\f2\b \cf4 call sub._ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc_56_760
+\f1\b0 \cf5  \cf9 ;[3]\cf5                                                               \
+\cf2 |     ||,=< \cf4 0x004009b2\cf5       \cf8 eb\cf6 31\cf5            \cf4 jmp 0x4009e5\cf5                 \cf9 ;[5]\cf5                                                                                                           \
+\cf2 |     |||   \cf5    \cf9 ; JMP XREF from 0x0040092b (main)\cf5                                           //Else for the third If block                                                                                            \
+\cf2 |     |||   \cf4 0x004009b4\cf5       \cf8 be8b0b\cf6 40\cf4 00\cf5      \cf8 mov\cf2  esi\cf5 ,\cf2  \cf6 str.Close__Try_again_n\cf9  ; 0x400b8b ; "Close! Try again\\n"\cf5                                                                          \
+\cf2 |     |||   \cf4 0x004009b9\cf5       \cf8 bf8011\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cout\cf9       ; method.std.cout ; 0x601180\cf5                                                                                   \
+\cf2 |     |||   \cf4 0x004009be\cf5       \cf8 e89dfd\cf9 ffff\cf5      
+\f2\b \cf4 call sub._ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc_56_760
+\f1\b0 \cf5  \cf9 ;[3]\cf5                                                               \
+\cf2 |    ,====< \cf4 0x004009c3\cf5       \cf8 eb\cf6 20\cf5            \cf4 jmp 0x4009e5\cf5                 \cf9 ;[5]\cf5                                                                                                           \
+\cf2 |    ||||   \cf5    \cf9 ; JMP XREF from 0x004008ff (main)\cf5                                         //Else for the second If block                                                                                              \
+\cf2 |    ||||   \cf4 0x004009c5\cf5       \cf8 bea00b\cf6 40\cf4 00\cf5      \cf8 mov\cf2  esi\cf5 ,\cf2  \cf6 str.One_down__few_more_to_go._Try_again_n\cf9  ; 0x400ba0 ; "One down, few more to go. Try again\\n"\cf5                                    \
+\cf2 |    ||||   \cf4 0x004009ca\cf5       \cf8 bf8011\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cout\cf9       ; method.std.cout ; 0x601180\cf5                                                                                   \
+\cf2 |    ||||   \cf4 0x004009cf\cf5       \cf8 e88cfd\cf9 ffff\cf5      
+\f2\b \cf4 call sub._ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc_56_760
+\f1\b0 \cf5  \cf9 ;[3]\cf5                                                               \
+\cf2 |   ,=====< \cf4 0x004009d4\cf5       \cf8 eb0f\cf5            \cf4 jmp 0x4009e5\cf5                 \cf9 ;[5]\cf5                                                                                                           \
+\cf2 |   |||||   \cf5    \cf9 ; JMP XREF from 0x004008d3 (main)\cf5                                        //Else for the first If block                                                                                              \
+\cf2 |   |||||   \cf4 0x004009d6\cf5       \cf8 bec50b\cf6 40\cf4 00\cf5      \cf8 mov\cf2  esi\cf5 ,\cf2  \cf6 str.Wrong_character_n\cf9  ; 0x400bc5 ; "Wrong character\\n"\cf5                                                                            \
+\cf2 |   |||||   \cf4 0x004009db\cf5       \cf8 bf8011\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cout\cf9       ; method.std.cout ; 0x601180\cf5                                                                                   \
+\cf2 |   |||||   \cf4 0x004009e0\cf5       \cf8 e8\cf6 7b\cf8 fd\cf9 ffff\cf5      
+\f2\b \cf4 call sub._ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc_56_760
+\f1\b0 \cf5  \cf9 ;[3]\cf5                                                               \
+\cf2 |   |||||   \cf5    \cf9 ; JMP XREF from 0x004009d4 (main)\cf5                                                                                                                                      \
+\cf2 |   |||||   \cf5    \cf9 ; JMP XREF from 0x004009c3 (main)\cf5                                                                                                                                      \
+\cf2 |   |||||   \cf5    \cf9 ; JMP XREF from 0x004009b2 (main)\cf5                                                                                                                                      \
+\cf2 |   |||||   \cf5    \cf9 ; JMP XREF from 0x004009a1 (main)\cf5                                                                                                                                      \
+\cf2 |   |||||   \cf5    \cf9 ; JMP XREF from 0x00400990 (main)\cf5                                                                                                                                      \
+\cf2 |   `````-> \cf4 0x004009e5\cf5       \cf8 b8\cf4 00000000\cf5      \cf8 mov\cf2  eax\cf5 ,\cf2  \cf6 0\cf5                                                                                                                                 \
+\cf2 |           \cf4 0x004009ea\cf5       \cf6 48\cf8 8b\cf6 55\cf8 f8\cf5        \cf8 mov\cf2  rdx\cf5 ,\cf2  qword \cf5 [\cf2 local_8h\cf5 ]                                                                                                                 \
+\cf2 |           \cf4 0x004009ee\cf5       \cf6 644833\cf8 14\cf6 2528\cf8 .\cf5   \cf2 xor rdx\cf5 ,\cf2  qword fs:\cf5 [\cf6 0x28\cf5 ]                                                                                                                  \
+\cf2 |       ,=< \cf4 0x004009f7\cf5       \cf6 74\cf8 05\cf5            \cf4 je 0x4009fe\cf5                  \cf9 ;[6]\cf5                                                                                                           \
+\cf2 |       |   \cf4 0x004009f9\cf5       \cf8 e8\cf6 72\cf8 fd\cf9 ffff\cf5      
+\f2\b \cf4 call sym.imp.__stack_chk_fail
+\f1\b0 \cf5  \cf9 ;[7] ; void __stack_chk_fail(void)                                                                          \cf5 \
+\cf2 |       |   \cf5    \cf9 ; JMP XREF from 0x004009f7 (main)\cf5                                                                                                                                      \
+\cf2 |       `-> \cf4 0x004009fe\cf5       \cf8 c9\cf5              
+\f2\b \cf7 leave
+\f1\b0 \cf5                                    //Clean up lines \
+\
+\
+3.\
+This is the program for the given executable:\
+#include<iostream>\
+using namespace std;\
+int main()\
+\{\
+int a;\
+cout<<\'93Enter an Integer:\\n\'94;\
+cin>>a;\
+a=a<<2;\
+cout<<a;\
+\}   \
+\
+   \cf9 ; DATA XREF from 0x004007dd (entry0)\cf5                                                                                                                                   \
+\cf2 |           \cf4 0x004008b6\cf5       \cf6 55\cf5              \cf7 push\cf2  rbp\cf5            //Moving the function to the stack                                                                                                                       \
+\cf2 |           \cf4 0x004008b7\cf5       \cf6 48\cf8 89e5\cf5          \cf8 mov\cf2  rbp\cf5 ,\cf2  rsp\cf5                                                                                                                               \
+\cf2 |           \cf4 0x004008ba\cf5       \cf6 48\cf8 83ec10\cf5        \cf6 sub\cf2  rsp\cf5 ,\cf2  \cf6 0x10\cf5        //Allocating Memory                                                                                                                      \
+\cf2 |           \cf4 0x004008be\cf5       \cf6 6448\cf8 8b04\cf6 2528\cf8 .\cf5   \cf8 mov\cf2  rax\cf5 ,\cf2  qword fs:\cf5 [\cf6 0x28\cf5 ]\cf9     ; [0x28:8]=0x1c70 ; '('\cf5     //Declaring Variable                                                                                   \
+\cf2 |           \cf4 0x004008c7\cf5       \cf6 48\cf8 89\cf6 45\cf8 f8\cf5        \cf8 mov qword\cf2  \cf5 [\cf2 local_8h\cf5 ],\cf2  rax\cf5                                                                                                                  \
+\cf2 |           \cf4 0x004008cb\cf5       \cf6 31\cf8 c0\cf5            \cf2 xor eax\cf5 ,\cf2  eax\cf5                                                                                                                               \
+\cf2 |           \cf4 0x004008cd\cf5       \cf8 be040a\cf6 40\cf4 00\cf5      \cf8 mov\cf2  esi\cf5 ,\cf2  \cf6 str.Enter_an_integer_n\cf9  ; 0x400a04 ; "Enter an integer\\n"\cf5      //Printing \'93Enter an Integer\'94                                                                    \
+\cf2 |           \cf4 0x004008d2\cf5       \cf8 bfa011\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cout\cf9       ; method.std.cout ; 0x6011a0\cf5                                                                                   \
+\cf2 |           \cf4 0x004008d7\cf5       \cf8 e8a4fe\cf9 ffff\cf5      
+\f2\b \cf4 call sub._ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc_64_780
+\f1\b0 \cf5  \cf9 ;[1]\cf5                                                               \
+\cf2 |           \cf4 0x004008dc\cf5       \cf6 48\cf8 8d\cf6 45\cf8 f4\cf5        \cf8 lea\cf2  rax\cf5 ,\cf2  \cf5 [\cf2 local_ch\cf5 ]                                                                                                                       \
+\cf2 |           \cf4 0x004008e0\cf5       \cf6 48\cf8 89c6\cf5          \cf8 mov\cf2  rsi\cf5 ,\cf2  rax\cf5                                                                                                                               \
+\cf2 |           \cf4 0x004008e3\cf5       \cf8 bf8010\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cin\cf9        ; method.std.cin ; 0x601080 ; "tu1~16.04.4) 5.4.0 20160609"\cf5   //Taking Input                                                 \
+\cf2 |           \cf4 0x004008e8\cf5       \cf8 e8b3fe\cf9 ffff\cf5      
+\f2\b \cf4 call sub._ZNSirsERi_80_7a0
+\f1\b0 \cf5   \cf9 ;[2]\cf5                                                                                                           \
+\cf2 |           \cf4 0x004008ed\cf5       \cf8 8b\cf6 55\cf8 f4\cf5          \cf8 mov\cf2  edx\cf5 ,\cf2  dword \cf5 [\cf2 local_ch\cf5 ]                                                                                                                 \
+\cf2 |           \cf4 0x004008f0\cf5       \cf8 89d0\cf5            \cf8 mov\cf2  eax\cf5 ,\cf2  edx\cf5                                                                                                                               \
+\cf2 |           \cf4 0x004008f2\cf5       \cf8 c1e002\cf5          \cf2 shl eax\cf5 ,\cf2  \cf6 2\cf5                        //Bitwise Left Operator.The Integer is shifted right by 2 bits.                                                                                                         \
+\cf2 |           \cf4 0x004008f5\cf5       \cf8 01d0\cf5            \cf6 add\cf2  eax\cf5 ,\cf2  edx\cf5                                                                                                                               \
+\cf2 |           \cf4 0x004008f7\cf5       \cf8 89\cf6 45\cf8 f4\cf5          \cf8 mov dword\cf2  \cf5 [\cf2 local_ch\cf5 ],\cf2  eax\cf5                                                                                                                  \
+\cf2 |           \cf4 0x004008fa\cf5       \cf8 8b\cf6 45\cf8 f4\cf5          \cf8 mov\cf2  eax\cf5 ,\cf2  dword \cf5 [\cf2 local_ch\cf5 ]                                                                                                                 \
+\cf2 |           \cf4 0x004008fd\cf5       \cf8 89c6\cf5            \cf8 mov\cf2  esi\cf5 ,\cf2  eax\cf5                                                                                                                               \
+\cf2 |           \cf4 0x004008ff\cf5       \cf8 bfa011\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cout\cf9       ; method.std.cout ; 0x6011a0\cf5      //Printing the output.                                                                             \
+\cf2 |           \cf4 0x00400904\cf5       \cf8 e8\cf6 27\cf8 fe\cf9 ffff\cf5      
+\f2\b \cf4 call sym.std::ostream::operator___int_
+\f1\b0 \cf5  \cf9 ;[3] ; sub._ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc_64_780-0x50\cf5                      \
+\cf2 |           \cf4 0x00400909\cf5       \cf8 b8\cf4 00000000\cf5      \cf8 mov\cf2  eax\cf5 ,\cf2  \cf6 0\cf5                                                                                                                                 \
+\cf2 |           \cf4 0x0040090e\cf5       \cf6 48\cf8 8b\cf6 4d\cf8 f8\cf5        \cf8 mov\cf2  rcx\cf5 ,\cf2  qword \cf5 [\cf2 local_8h\cf5 ]                                                                                                                 \
+\cf2 |           \cf4 0x00400912\cf5       \cf6 644833\cf8 0c\cf6 2528\cf8 .\cf5   \cf2 xor rcx\cf5 ,\cf2  qword fs:\cf5 [\cf6 0x28\cf5 ]                                                                                                                  \
+\cf2 |       ,=< \cf4 0x0040091b\cf5       \cf6 74\cf8 05\cf5            \cf4 je 0x400922\cf5                  \cf9 ;[4]\cf5                                                                                                           \
+\cf2 |       |   \cf4 0x0040091d\cf5       \cf8 e8\cf6 6e\cf8 fe\cf9 ffff\cf5      
+\f2\b \cf4 call sym.imp.__stack_chk_fail
+\f1\b0 \cf5  \cf9 ;[5] ; void __stack_chk_fail(void)                                                                          \cf5 \
+\cf2 |       |   \cf5    \cf9 ; JMP XREF from 0x0040091b (sym.main)\cf5                                                                                                                                  \
+\cf2 |       `-> \cf4 0x00400922\cf5       \cf8 c9\cf5              
+\f2\b \cf7 leave
+\f1\b0 \cf5                                                                                                                                      \
+\cf2 \\           \cf4 0x00400923\cf5       \cf8 c3\cf5              \cf9 ret\cf5  \
+\
+4.\
+\
+This program does multiplication,Subtraction.\
+\
+\cf2            \cf4 0x004008b6\cf5       \cf6 55\cf5              \cf7 push\cf2  rbp\cf5                                                                                                                                   \
+\cf2 |           \cf4 0x004008b7\cf5       \cf6 48\cf8 89e5\cf5          \cf8 mov\cf2  rbp\cf5 ,\cf2  rsp\cf5                                                                                                                               \
+\cf2 |           \cf4 0x004008ba\cf5       \cf6 48\cf8 83ec10\cf5        \cf6 sub\cf2  rsp\cf5 ,\cf2  \cf6 0x10\cf5                                                                                                                              \
+\cf2 |           \cf4 0x004008be\cf5       \cf6 6448\cf8 8b04\cf6 2528\cf8 .\cf5   \cf8 mov\cf2  rax\cf5 ,\cf2  qword fs:\cf5 [\cf6 0x28\cf5 ]\cf9     ; [0x28:8]=0x1c70 ; '('\cf5                                                                                        \
+\cf2 |           \cf4 0x004008c7\cf5       \cf6 48\cf8 89\cf6 45\cf8 f8\cf5        \cf8 mov qword\cf2  \cf5 [\cf2 local_8h\cf5 ],\cf2  rax\cf5                                                                                                                  \
+\cf2 |           \cf4 0x004008cb\cf5       \cf6 31\cf8 c0\cf5            \cf2 xor eax\cf5 ,\cf2  eax\cf5                                                                                                                               \
+\cf2 |           \cf4 0x004008cd\cf5       \cf8 be140a\cf6 40\cf4 00\cf5      \cf8 mov\cf2  esi\cf5 ,\cf2  \cf6 str.Enter_an_integer_n\cf9  ; 0x400a14 ; "Enter an integer\\n"\cf5      //Printing \'93Enter an integer\'94                                                                    \
+\cf2 |           \cf4 0x004008d2\cf5       \cf8 bfa011\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cout\cf9       ; method.std.cout ; 0x6011a0\cf5                                                                                   \
+\cf2 |           \cf4 0x004008d7\cf5       \cf8 e8a4fe\cf9 ffff\cf5      
+\f2\b \cf4 call sub._ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc_64_780
+\f1\b0 \cf5  \cf9 ;[1]\cf5                                                               \
+\cf2 |           \cf4 0x004008dc\cf5       \cf6 48\cf8 8d\cf6 45\cf8 f4\cf5        \cf8 lea\cf2  rax\cf5 ,\cf2  \cf5 [\cf2 local_ch\cf5 ]                                                                                                                       \
+\cf2 |           \cf4 0x004008e0\cf5       \cf6 48\cf8 89c6\cf5          \cf8 mov\cf2  rsi\cf5 ,\cf2  rax\cf5                                                                                                                               \
+\cf2 |           \cf4 0x004008e3\cf5       \cf8 bf8010\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cin\cf9        ; method.std.cin ; 0x601080 ; "tu1~16.04.4) 5.4.0 20160609"\cf5    //Reading the integer from the user                                                \
+\cf2 |           \cf4 0x004008e8\cf5       \cf8 e8b3fe\cf9 ffff\cf5      
+\f2\b \cf4 call sub._ZNSirsERi_80_7a0
+\f1\b0 \cf5   \cf9 ;[2]\cf5                                                                                                           \
+\cf2 |           \cf4 0x004008ed\cf5       \cf8 8b\cf6 4d\cf8 f4\cf5          \cf8 mov\cf2  ecx\cf5 ,\cf2  dword \cf5 [\cf2 local_ch\cf5 ]                                                                                                                 \
+\cf2 |           \cf4 0x004008f0\cf5       \cf8 ba\cf6 56555555\cf5      \cf8 mov\cf2  edx\cf5 ,\cf2  \cf6 0x55555556\cf5                                                                                                                        \
+\cf2 |           \cf4 0x004008f5\cf5       \cf8 89c8\cf5            \cf8 mov\cf2  eax\cf5 ,\cf2  ecx\cf5                                                                                                                               \
+\cf2 |           \cf4 0x004008f7\cf5       \cf8 f7ea\cf5            \cf6 imul\cf2  edx\cf5            //Performing multiplication operation                                                                                                                       \
+\cf2 |           \cf4 0x004008f9\cf5       \cf8 89c8\cf5            \cf8 mov\cf2  eax\cf5 ,\cf2  ecx\cf5                                                                                                                               \
+\cf2 |           \cf4 0x004008fb\cf5       \cf8 c1f81f\cf5          \cf2 sar eax\cf5 ,\cf2  \cf6 0x1f\cf5        //Performing Shift Arithmetic Right operation                                                                                                                      \
+\cf2 |           \cf4 0x004008fe\cf5       \cf6 29\cf8 c2\cf5            \cf6 sub\cf2  edx\cf5 ,\cf2  eax\cf5         //Performing Subtraction operation                                                                                                                      \
+\cf2 |           \cf4 0x00400900\cf5       \cf8 89d0\cf5            \cf8 mov\cf2  eax\cf5 ,\cf2  edx\cf5                                                                                                                               \
+\cf2 |           \cf4 0x00400902\cf5       \cf8 89\cf6 45\cf8 f4\cf5          \cf8 mov dword\cf2  \cf5 [\cf2 local_ch\cf5 ],\cf2  eax\cf5                                                                                                                  \
+\cf2 |           \cf4 0x00400905\cf5       \cf8 8b\cf6 45\cf8 f4\cf5          \cf8 mov\cf2  eax\cf5 ,\cf2  dword \cf5 [\cf2 local_ch\cf5 ]                                                                                                                 \
+\cf2 |           \cf4 0x00400908\cf5       \cf8 89c6\cf5            \cf8 mov\cf2  esi\cf5 ,\cf2  eax\cf5                                                                                                                               \
+\cf2 |           \cf4 0x0040090a\cf5       \cf8 bfa011\cf6 60\cf4 00\cf5      \cf8 mov\cf2  edi\cf5 ,\cf2  \cf6 obj.std::cout\cf9       ; method.std.cout ; 0x6011a0\cf5     //Printing Output                                                                              \
+\cf2 |           \cf4 0x0040090f\cf5       \cf8 e81cfe\cf9 ffff\cf5      
+\f2\b \cf4 call sym.std::ostream::operator___int_
+\f1\b0 \cf5  \cf9 ;[3] ; sub._ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc_64_780-0x50\cf5                      \
+\cf2 |           \cf4 0x00400914\cf5       \cf8 b8\cf4 00000000\cf5      \cf8 mov\cf2  eax\cf5 ,\cf2  \cf6 0\cf5                                                                                                                                 \
+\cf2 |           \cf4 0x00400919\cf5       \cf6 48\cf8 8b\cf6 4d\cf8 f8\cf5        \cf8 mov\cf2  rcx\cf5 ,\cf2  qword \cf5 [\cf2 local_8h\cf5 ]                                                                                                                 \
+\cf2 |           \cf4 0x0040091d\cf5       \cf6 644833\cf8 0c\cf6 2528\cf8 .\cf5   \cf2 xor rcx\cf5 ,\cf2  qword fs:\cf5 [\cf6 0x28\cf5 ]                                                                                                                  \
+\cf2 |       ,=< \cf4 0x00400926\cf5       \cf6 74\cf8 05\cf5            \cf4 je 0x40092d\cf5                  \cf9 ;[4]\cf5                                                                                                           \
+\cf2 |       |   \cf4 0x00400928\cf5       \cf8 e8\cf6 63\cf8 fe\cf9 ffff\cf5      
+\f2\b \cf4 call sym.imp.__stack_chk_fail
+\f1\b0 \cf5  \cf9 ;[5] ; void __stack_chk_fail(void)                                                                          \cf5 \
+\cf2 |       |   \cf5    \cf9 ; JMP XREF from 0x00400926 (sym.main)\cf5                                                                                                                                  \
+\cf2 |       `-> \cf4 0x0040092d\cf5       \cf8 c9\cf5              
+\f2\b \cf7 leave
+\f1\b0 \cf5                                                                                                                                      \
+\cf2 \\           \cf4 0x0040092e\cf5       \cf8 c3\cf5              \cf9 ret\cf5                                                                                                                                        }
