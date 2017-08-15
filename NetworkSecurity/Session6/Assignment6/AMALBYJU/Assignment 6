@@ -1,0 +1,69 @@
+Answer 1
+
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter an integer");
+ scanf("%d",&n);
+ printf("Try again");
+}
+
+Answer 2
+
+#include<stdio.h>
+int main()
+{
+ char n;
+ printf("Enter a character\n");
+ scanf("%c",&n);
+ if(n=='G')
+ {
+   printf("Good. Enter the next\n");
+   scanf("%c",&n);
+   if(n=='r')
+   {
+     printf("Next?\n");
+     scanf("%c",&n);
+     if(n=='3')
+     {
+       printf("Close. Next\n");
+       scanf("%c",&n);
+       if(n=='4')
+       {
+         printf("The last one!\n");
+         scanf("%c",&n);
+         if(n=='t')
+         {
+           printf("Congrats :)\n");
+           return 0;
+         }
+         printf("You can guess it now! Got to try again\n");
+         return 0;
+       }
+       printf("Sooooo close!!! Try again\n");
+       return 0;
+     }
+     printf("Close! Try again\n");
+     return 0;
+   }
+   printf("One down, few more to go. Try again\n");
+   return 0;
+ }
+ printf("Wrong character\n");
+}
+  
+Answer 3
+
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter an integer\n");
+ scanf("%d",&n);
+ n=4*n+n;
+ printf("%d",n);
+ return 0;
+}
+
+ 
